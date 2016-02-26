@@ -1,3 +1,2 @@
-window.jQuery = require('jquery');
-require('materialize-css/dist/css/materialize.min.css');
-// require('materialize-css/dist/js/materialize.min.js');
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'imports?jQuery=jquery!bootstrap/dist/js/bootstrap.min.js';

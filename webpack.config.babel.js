@@ -1,12 +1,12 @@
-var path = require('path');
+import path from 'path';
 
 module.exports = {
   entry: {
-    app: "./app.js"
+    app: ['./app.js']
   },
   output: {
     path: path.resolve(__dirname, 'build', 'hotspot'),
-    filename: './app.js'
+    filename: './bundle.js'
   },
   module: {
     loaders: [
@@ -27,8 +27,5 @@ module.exports = {
         loader: 'url-loader?limit=30000&name=[name]-[hash].[ext]'
       }
     ]
-  },
-  externals: {
-    'jquery/dist/jquery': 'jQuery'
   }
 };
