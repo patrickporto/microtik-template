@@ -5,6 +5,10 @@
   "author": "Patrick Porto <patrick.s.porto@gmaill.com>",
   "license": "MIT",
   "devDependencies": {
-    "eslint-config-google": "^0.4.0"
+    "babel-core": "^6.5.2",
+    "babel-preset-es2015": "^6.5.0",
+    "eslint-config-google": "^0.4.0",
+    "gulp": "^3.9.1",
+    "gulp-nunjucks": "^2.2.0"
   }
 }
