@@ -1,0 +1,7 @@
+{
+  "name": "mikrotik-template",
+  "version": "1.0.0",
+  "description": "Template responsivo para mikrotik",
+  "author": "Patrick Porto <patrick.s.porto@gmaill.com>",
+  "license": "MIT"
+}
