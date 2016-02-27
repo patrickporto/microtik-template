@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'imports?jQuery=jquery!bootstrap/dist/js/bootstrap.min.js';
 
+require('alogin.jade');
 require('login.jade');
 require('error.jade');
 require('redirect.jade');
