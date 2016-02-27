@@ -1,2 +1,43 @@
 extends base
+
+block title
+  title #{title} > status
+
+block extra_head
+  meta(http-equiv='refresh' content='$(refresh-timeout-secs)')
+
 block content
+  $(if login-by == &#39;trial&#39;)
+  h1 Bem vindo, anônimo!
+  $(elif login-by != &#39;mac&#39;)
+  h1 Bem vindo, $(username)!
+  $(endif)
+  table.table
+    tr
+      td
+        strong Endereço IP
+      td
+        $(ip)
+    tr
+      td
+        strong Endereço MAC
+      td
+        $(mac)
+    tr
+      td
+        strong Conectado à
+      td
+        $(uptime)
+    $(if session-time-left)
+    tr
+      td
+        strong Tempo de Conexão
+      td
+        $(session-time-left)
+    $(endif)
+    tr
+      td
+        strong UP/DOWN
+      td
+        $(bytes-in-nice) / $(bytes-out-nice)
+  a(href='$(link-logout)') Desconectar

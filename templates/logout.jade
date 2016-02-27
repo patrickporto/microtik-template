@@ -23,19 +23,35 @@ block content
         $(mac)
     tr
       td
-        strong Tempo de sessão
+        strong Conectado à
       td
         $(uptime)
     $(if session-time-left)
     tr
       td
-        strong Tempo restante
+        strong Tempo de Conexão
       td
         $(session-time-left)
     $(endif)
     tr
       td
-        strong bytes up/down
+        strong UP/DOWN
       td
         $(bytes-in-nice) / $(bytes-out-nice)
+    $(if blocked == &#39;yes&#39;)
+    tr
+      td
+        strong Status
+      td
+        a(href='$(link-advert)' target='hotspot_advert') advertisement required
+    $(elif refresh-timeout)
+    tr
+      td
+        strong Atualização de Página
+      td
+        $(refresh-timeout)
+    $(endif)
+    
+  $(if login-by-mac != &#39;yes&#39;)
   a(href='$(link-login)') Conectar
+  $(endif)
