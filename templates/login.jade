@@ -1,6 +1,9 @@
 extends base
 block content
   .row-fluid
+    .col-md-12
+      h1.text-center #{title}
+  .row-fluid
     .col-md-4
       form(name='sendin' action='$(link-login-only)' method='post')
         $(if error)
