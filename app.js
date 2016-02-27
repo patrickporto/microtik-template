@@ -5,3 +5,4 @@ require('login.jade');
 require('error.jade');
 require('redirect.jade');
 require('status.jade');
+require('logout.jade');

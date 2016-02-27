@@ -1,0 +1,41 @@
+extends base
+
+block title
+  title #{title} > logout
+
+block content
+  h1 Você está desconectado
+  table.table
+    tr
+      td
+        strong Usuário
+      td
+        $(username)
+    tr
+      td
+        strong Endereço IP
+      td
+        $(ip)
+    tr
+      td
+        strong Endereço MAC
+      td
+        $(mac)
+    tr
+      td
+        strong Tempo de sessão
+      td
+        $(uptime)
+    $(if session-time-left)
+    tr
+      td
+        strong Tempo restante
+      td
+        $(session-time-left)
+    $(endif)
+    tr
+      td
+        strong bytes up/down
+      td
+        $(bytes-in-nice) / $(bytes-out-nice)
+  a(href='$(link-login)') Conectar
