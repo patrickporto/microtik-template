@@ -1,0 +1,14 @@
+extends base
+
+block title
+  title #{title} > Propaganda
+
+block extra_head
+  meta(http-equiv='refresh' content='2; url=$(link-orig)')
+
+block content
+  h1 Propaganda
+  p
+    | Se nada acontecer, abra a 
+    a(href='$(link-redirect)' target='hotspot_advert') propaganda
+    |  manualmente.
