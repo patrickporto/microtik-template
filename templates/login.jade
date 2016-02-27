@@ -1,0 +1,16 @@
+extends base
+block content
+  .row
+    form(name='sendin' action='$(link-login-only)' method='post').col.s12
+      $(if error)
+      .alert.alert-danger $(error)
+      $(endif)
+      input(type='hidden' name='dst' value='{{homePage}}')
+      input(type='hidden' name='popup' value='false')
+      .form-group
+        label(for='username') Usuário
+        input(type='text' id='username' name='username' placeholder='Usuário' value='$(username)').form-control
+      .form-group
+        label(for='password') Senha
+        input(type='password' id='password' name='password' placeholder='Senha').form-control
+      button(type="submit" class="btn btn-primary") Conectar
