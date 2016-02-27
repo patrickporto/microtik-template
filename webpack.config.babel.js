@@ -1,5 +1,8 @@
 import path from 'path';
+import fs from 'fs';
+import yml from 'js-yaml';
 
+const config = yml.load(fs.readFileSync('./config.yml', 'utf-8'));
 module.exports = {
   entry: {
     app: ['./app.js']
@@ -37,7 +40,7 @@ module.exports = {
       },
       {
         test: /\.(jade)$/,
-        loader: 'file?name=[name].html!jade-html'
+        loader: `file?name=[name].html!jade-html?${JSON.stringify(config)}`
       }
     ]
   }

@@ -5,6 +5,7 @@
   "author": "Patrick Porto <patrick.s.porto@gmaill.com>",
   "license": "MIT",
   "scripts": {
+    "start": "./node_modules/.bin/webpack-dev-server --config ./webpack.config.babel.js --content-base ./build/hotspot --hot",
     "build": "./node_modules/.bin/webpack --config ./webpack.config.babel.js",
     "postbuild": "gulp compile:html"
   },
@@ -15,14 +16,16 @@
     "css-loader": "^0.23.1",
     "eslint": "^2.2.0",
     "eslint-config-google": "^0.4.0",
-    "imports-loader": "^0.8.5",
     "file-loader": "^0.8.5",
+    "imports-loader": "^0.8.5",
     "jade-html-loader": "0.0.3",
+    "js-yaml": "^3.5.3",
     "json-loader": "^0.5.4",
     "script-loader": "^0.6.1",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
-    "webpack": "^1.12.14"
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
     "bootstrap": "^3.3.6",
