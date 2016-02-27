@@ -1,0 +1,71 @@
+@import "variables.less";
+
+footer {
+    color: @primaryColor;
+    background: @primaryBackground;
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: 300;
+    line-height: 50px;
+}
+
+header {
+    color: @primaryColor;
+    background: @primaryBackground;
+    margin-bottom: 10px;
+    p {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    a {
+        text-decoration: underline;
+        color: @primaryColor;
+        &:hover {
+            color: @primaryColor;
+        }
+    }
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+.btn {
+    border-radius: 0;
+    &-primary {
+        color: @primaryColor;
+        background: @primaryBackground;
+        border-color: @primaryBackground;
+        transition: all 0.3s;
+        &:hover {
+            background: @primaryBackground;
+            border-color: @primaryBackground;
+            opacity: 0.8;
+            transition: all 0.3s;
+        }
+    }
+}
+
+.alert {
+    border-radius: 0;
+}
+
+.tab-content {
+    border: 1px solid #ddd;
+    border-top: none;
+    padding: 10px;
+}
+
+.nav.nav-tabs {
+    .active a {
+        color: @primaryBackground;
+        border-radius: 0;
+    }
+    a {
+        color: @primaryBackground;
+        &:hover {
+            border-radius: 0;
+        }
+    }
+}

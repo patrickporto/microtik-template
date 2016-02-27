@@ -13,7 +13,8 @@ module.exports = {
   },
   resolve: {
     root: [
-      path.resolve(__dirname, 'templates')
+      path.resolve(__dirname, 'templates'),
+      path.resolve(__dirname, 'stylesheets')
     ]
   },
   module: {
@@ -29,6 +30,10 @@ module.exports = {
       {
         test: /\.css$/,
         loader: 'style!css'
+      },
+      {
+        test: /\.less$/,
+        loader: 'style!css!less'
       },
       {
         test: /\.json$/,
