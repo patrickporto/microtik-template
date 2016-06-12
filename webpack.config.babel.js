@@ -13,7 +13,7 @@ module.exports = {
   },
   resolve: {
     root: [
-      path.resolve(__dirname, 'templates'),
+      path.resolve(__dirname, 'views'),
       path.resolve(__dirname, 'stylesheets')
     ]
   },
