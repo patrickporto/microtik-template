@@ -8,36 +8,37 @@ block extra_head
 
 block content
   $(if login-by == &#39;trial&#39;)
-  h1 Bem vindo, anônimo!
+  h1.mdl-layout-title Bem vindo, anônimo!
   $(elif login-by != &#39;mac&#39;)
-  h1 Bem vindo, $(username)!
+  h1.mdl-layout-title Bem vindo, $(username)!
   $(endif)
-  table.table
-    tr
-      td
-        strong Endereço IP
-      td
-        $(ip)
-    tr
-      td
-        strong Endereço MAC
-      td
-        $(mac)
-    tr
-      td
-        strong Conectado à
-      td
-        $(uptime)
-    $(if session-time-left)
-    tr
-      td
-        strong Tempo de Conexão
-      td
-        $(session-time-left)
-    $(endif)
-    tr
-      td
-        strong UP/DOWN
-      td
-        $(bytes-in-nice) / $(bytes-out-nice)
-  a(href='$(link-logout)').btn.btn-primary Desconectar
+  main.mdl-layout__content
+    table.mdl-cell.mdl-cell--12-col
+      tr
+        td
+          strong Endereço IP
+        td
+          $(ip)
+      tr
+        td
+          strong Endereço MAC
+        td
+          $(mac)
+      tr
+        td
+          strong Conectado à
+        td
+          $(uptime)
+      $(if session-time-left)
+      tr
+        td
+          strong Tempo de Conexão
+        td
+          $(session-time-left)
+      $(endif)
+      tr
+        td
+          strong UP/DOWN
+        td
+          $(bytes-in-nice) / $(bytes-out-nice)
+    a(href='$(link-logout)').mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored.mdl-cell.mdl-cell--12-col Desconectar

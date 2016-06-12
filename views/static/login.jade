@@ -1,29 +1,15 @@
 extends ../base
 block content
-  .row-fluid
-    .col-md-12
-      h1.text-center #{title}
-  .row-fluid
-    .col-md-4
-      form(name='sendin' action='$(link-login-only)' method='post')
-        $(if error)
-        .alert.alert-danger $(error)
-        $(endif)
-        input(type='hidden' name='dst' value='#{homePage}')
-        input(type='hidden' name='popup' value='false')
-        .form-group
-          label(for='username') Usuário
-          input(type='text' id='username' name='username' placeholder='Usuário' value='$(username)').form-control
-        .form-group
-          label(for='password') Senha
-          input(type='password' id='password' name='password' placeholder='Senha').form-control
-        button(type="submit" class="btn btn-primary") Conectar
-    .col-md-8
-      ul.nav.nav-tabs
-        li.active: a(href="#plans" data-toggle="tab") Planos
-        li: a(href="#services" data-toggle="tab") Serviços
-      .tab-content
-        #plans.tab-pane.active
-          include:markdown ../../contents/plans.md
-        #services.tab-pane
-          include:markdown ../../contents/services.md
+  h1.mdl-layout-title #{title}
+  main.mdl-layout__content
+    form(name='sendin' action='$(link-login-only)' method='post' data-error='$(error)').mdl-grid
+      input(type='hidden' name='dst' value='#{homePage}')
+      input(type='hidden' name='popup' value='false')
+      .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
+        input(type='text' id='username' name='username' value='$(username)').mdl-textfield__input
+        label(for='username').mdl-textfield__label Usuário
+      .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
+        input(type='password' id='password' name='password').mdl-textfield__input
+        label(for='password').mdl-textfield__label Senha
+      button(type="submit" class="btn btn-primary").mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored.mdl-cell.mdl-cell--12-col Conectar
+      a(href='tel:#{phone}').mdl-cell.mdl-cell--12-col.text-center Não tem conta ainda? Crie uma

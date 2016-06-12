@@ -4,11 +4,12 @@ block title
   title #{title} > Propaganda
 
 block extra_head
-  meta(http-equiv='refresh' content='2; url=$(link-orig)')
+  meta(http-equiv='refresh' content='10; url=$(link-orig)')
 
 block content
-  h1 Propaganda
-  p
-    | Se nada acontecer, abra a 
-    a(href='$(link-redirect)' target='hotspot_advert') propaganda
-    |  manualmente.
+  h1.mdl-layout-title Propaganda
+  main.mdl-layout__content
+    p
+      | Se nada acontecer, abra a 
+      a(href='$(link-redirect)' target='hotspot_advert') propaganda
+      |  manualmente.

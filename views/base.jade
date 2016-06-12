@@ -7,9 +7,13 @@ html(lang='pt-br')
     block title
       title #{title}
     block extra_head
+    link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
   body
-    include _header
-    main.container
-      block content
-    include _footer
+    .mdl-layout.mdl-js-layout
+      div
+        block content
+      include _footer
+    #toast.mdl-js-snackbar.mdl-snackbar
+      .mdl-snackbar__text
+        button(type='button').mdl-snackbar__action
   script(src="./bundle.js")

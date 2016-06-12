@@ -4,6 +4,9 @@ block title
   title #{title} > error
 
 block content
-  h1 Hotspot ERROR: $(error)
-  p Login page: 
-    a(href='$(link-login)') $(link-login)
+  main.mdl-layout__content
+    .mdl-grid
+      .mdl-cell.mdl-cell--12-col
+        h1.mdl-layout-title Hotspot ERROR: $(error)
+        p Login page: 
+          a(href='$(link-login)') $(link-login)

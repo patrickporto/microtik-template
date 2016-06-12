@@ -4,54 +4,56 @@ block title
   title #{title} > logout
 
 block content
-  h1 Você está desconectado
-  table.table
-    tr
-      td
-        strong Usuário
-      td
-        $(username)
-    tr
-      td
-        strong Endereço IP
-      td
-        $(ip)
-    tr
-      td
-        strong Endereço MAC
-      td
-        $(mac)
-    tr
-      td
-        strong Conectado à
-      td
-        $(uptime)
-    $(if session-time-left)
-    tr
-      td
-        strong Tempo de Conexão
-      td
-        $(session-time-left)
-    $(endif)
-    tr
-      td
-        strong UP/DOWN
-      td
-        $(bytes-in-nice) / $(bytes-out-nice)
-    $(if blocked == &#39;yes&#39;)
-    tr
-      td
-        strong Status
-      td
-        a(href='$(link-advert)' target='hotspot_advert') advertisement required
-    $(elif refresh-timeout)
-    tr
-      td
-        strong Atualização de Página
-      td
-        $(refresh-timeout)
-    $(endif)
-    
-  $(if login-by-mac != &#39;yes&#39;)
-  a(href='$(link-login)').btn.btn-primary Conectar
-  $(endif)
+  h1.mdl-layout-title Você está desconectado
+  main.mdl-layout__content
+    .mdl-grid
+      table.mdl-cell.mdl-cell--12-col
+        tr
+          td
+            strong Usuário
+          td
+            $(username)
+        tr
+          td
+            strong Endereço IP
+          td
+            $(ip)
+        tr
+          td
+            strong Endereço MAC
+          td
+            $(mac)
+        tr
+          td
+            strong Conectado à
+          td
+            $(uptime)
+        $(if session-time-left)
+        tr
+          td
+            strong Tempo de Conexão
+          td
+            $(session-time-left)
+        $(endif)
+        tr
+          td
+            strong UP/DOWN
+          td
+            $(bytes-in-nice) / $(bytes-out-nice)
+        $(if blocked == &#39;yes&#39;)
+        tr
+          td
+            strong Status
+          td
+            a(href='$(link-advert)' target='hotspot_advert') advertisement required
+        $(elif refresh-timeout)
+        tr
+          td
+            strong Atualização de Página
+          td
+            $(refresh-timeout)
+        $(endif)
+        
+      $(if login-by-mac != &#39;yes&#39;)
+      a(href='$(link-login)').mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored.mdl-cell.mdl-cell--12-col Conectar
+      $(endif)
