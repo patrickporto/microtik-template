@@ -1,6 +1,11 @@
 @import "variables.less";
 @import "helpers.less";
 
+:root {
+    background-color: #E2E6FB;
+    color: #132584;
+}
+
 .mdl-layout-title {
     text-align: center;
 }
@@ -16,9 +21,9 @@
     }
 }
 
-:root {
-    background-color: #E2E6FB;
-    color: #132584;
+.footer-wrapper {
+    min-height: 100%;
+    margin-bottom: -@footerHeight;
 }
 
 a {
@@ -28,7 +33,7 @@ a {
 .mdl-mini-footer {
     background-color: #4353A9;
     color: #E2E6FB;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    line-height: @footerHeight;
+    padding-top: 0;
+    padding-bottom: 0;
 }
