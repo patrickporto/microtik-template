@@ -10,7 +10,8 @@ block content
     .google-adsense-half-page-right
       include ../advertisement/half-page.html
   main.mdl-layout__content
-    form(name='sendin' action='$(link-login-only)' method='post' data-error='$(error)').mdl-grid
+  
+    form(name='login' action='$(link-login-only)' method='post' data-error='$(error)' data-chap-id='$(chap-id)' data-chap-challenge='$(chap-challenge)').mdl-grid
       input(type='hidden' name='dst' value='#{homePage}')
       input(type='hidden' name='popup' value='false')
       .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell.mdl-cell--12-col
