@@ -1,6 +1,14 @@
 extends ../base
 block content
+  if advertisement
+    .google-adsense-header-mobile
+      include ../advertisement/header-mobile.html
   h1.mdl-layout-title #{title}
+  if advertisement
+    .google-adsense-half-page-left
+      include ../advertisement/half-page.html
+    .google-adsense-half-page-right
+      include ../advertisement/half-page.html
   main.mdl-layout__content
     form(name='sendin' action='$(link-login-only)' method='post' data-error='$(error)').mdl-grid
       input(type='hidden' name='dst' value='#{homePage}')
