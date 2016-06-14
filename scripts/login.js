@@ -9,10 +9,10 @@ window.addEventListener('load', function() {
   }
   if (chapId) {
     formLogin.onsubmit = function() {
-      console.log(hexMD5);
-      console.log(hexMD5(`${chapId}${formLogin.password.value}${chapChallenge}`));
-      formLogin.password.value = hexMD5(`${chapId}${formLogin.password.value}${chapChallenge}`);
-      console.log(formLogin);
+      const sendin = formLogin.cloneNode(true);
+      sendin.password.value = hexMD5(`${chapId}${formLogin.password.value}${chapChallenge}`);
+      sendin.submit();
+      return false;
     };
   }
 });
