@@ -2,6 +2,8 @@ import 'material-design-lite/material.min.css';
 import 'material-design-lite/material.min.js';
 import 'theme.less';
 
+require('file?name=md5.[ext]!md5.js');
+
 require('static/alogin.jade');
 require('static/login.jade');
 require('static/error.jade');

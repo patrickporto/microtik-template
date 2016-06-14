@@ -14,6 +14,7 @@ module.exports = {
   resolve: {
     root: [
       path.resolve(__dirname, 'views'),
+      path.resolve(__dirname, 'scripts'),
       path.resolve(__dirname, 'stylesheets')
     ]
   },
